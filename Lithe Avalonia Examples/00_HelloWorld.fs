@@ -34,9 +34,9 @@ type App() =
 
         base.OnFrameworkInitializationCompleted()
 
-open Avalonia.Logging.Serilog
+
 [<CompiledName "BuildAvaloniaApp">] 
 let buildAvaloniaApp () = 
-    AppBuilder.Configure<App>().UsePlatformDetect().LogToDebug()
+    AppBuilder.Configure<App>().UsePlatformDetect()
 
 let main argv = buildAvaloniaApp().StartWithClassicDesktopLifetime(argv)
